@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register</title>
+	<style type="text/css">
+		.bold-text{
+			font-weight: 700;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Registration form</h1>
+		<nav>
+			<a href="facebook.com"><span class="bold-text">F</span>acebook</a>
+			<a href="apple.com"><span class="bold-text">A</span>pple</a>
+			<a href="amazon.com"><span class="bold-text">A</span>mazon</a>
+				<a href="netflix.com"><span class="bold-text">N</span>etflix</a>
+			<a href="google.com"><span class="bold-text">G</span>oogle</a>
+		</nav>
+	</header>
+	<main>
+		<!-- USE POST, NOT GET -->
+		<form method="GET" action="/register">
+			<label for="firstname">First Name : </label><input type="hidden" name="firstname" value="aa"><br>
+			<label for="lastname">Last Name : </label><input type="text" name="lastname"><br>
+			<label for="email">E-mail : </label><input type="email" name="email" required><br>
+			<label for="password">Password : </label><input type="password" min="5" name="password"><br>
+			<label for="birthday">Birthday : </label><input type="date" name="birthday"><br>
+			<label for="gender">Gender : </label><br>
+			<input type="radio" value="male" name="gender" checked required>Male <br>
+			<input type="radio" value="female" name="gender">Female<br>
+			<input type="radio" value="other" name="gender">Other<br> 
+			<label for="pet">Pets : </label><br>
+			<input type="checkbox" value="dog" name="pet">Dog<br>
+			<input type="checkbox" value="cat" name="pet">Cat<br>
+			<input type="checkbox" value="Ape" name="pet">Ape<br>
+			<label for="car">Cars : </label><br>
+			<select name="car">
+				<option value="audi">Audi</option>
+				<option value="volvo">Volvo</option>
+			</select> <br>
+			<input type="submit" value="Register">
+			<input type="reset">
+		</form>
+	</main>
+	<footer>
+		This is a website made with love.
+	</footer>
+</body>
+</html>
