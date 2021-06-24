@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Frontend Bootcamp</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+	<link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<!-- Modal triggered upon clicking the button -->
+	<div class="modal fade" id="modalID" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+		<div class="modal-dialog modal-dialog-centered">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h5 class="modal-title text-center w-100" id="staticBackdropLabel">Sign up</h5>
+			  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<form action="/">
+				<div class="modal-body">
+					<div class="form-floating mb-3">
+						<input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+						<label for="floatingInput">Email address</label>
+					</div>
+					<div class="form-floating">
+						<input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+						<label for="floatingPassword">Password</label>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="w-100 btn btn-primary">Signup</button>
+				</div>
+			</form>
+		  </div>
+		</div>
+	  </div>
+
+	<!-- navbar -->
+	<!-- 
+		.navbar-expand{-sm|-lg|-xl|-xxl}: Required for responsive collapsing at reqd. breakpoints
+		.navbar{-dark|-light} : Color scheme for navbar
+		.bg{-dark|-light} : Sets background color for an element
+		e.g. .navbar-dark.bg-dark : Sets navar's bgcolor as black and text as white
+	 -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3 fixed-md-top">
+
+		<!-- .container{/-fluid/-sm/-lg/-xl/-xxl} : Sets containers of various sizes-->
+		<div class="container">
+
+			<!-- .navbar-brand : Sets brand name for navbar -->
+			<a href="#" class="navbar-brand">NAVBAR BRAND</a>
+
+			<!-- 
+				.navbar-toggler : For toggle button on navbar
+				data-bs-toggle="collapse"  : What should happen when toggle button is clicked
+				data-bs-target="#idName"  : Which region should be collapsed
+				.navbar-toggle-icon : Hamburger icon
+			 -->
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<!-- .collapse.navbar-collapse : Creates collapsible menu -->
+			<div class="collapse navbar-collapse" id="navmenu">
+
+				<!-- 
+					.navbar-nav : Creates full-height navigation
+					.nav-item : Creates navigation bar items
+					.nav-link : Creates links inside navigation bar items 
+				 -->
+				<ul class="navbar-nav ms-auto">
+					<li class="nav-item">
+						<a href="#section1" class="nav-link">LINK1</a>
+					</li>
+					<li class="nav-item">
+						<a href="#section2" class="nav-link">LINK2</a>
+					</li>
+					<li class="nav-item">
+						<a href="#section3" class="nav-link">LINK3</a>
+					</li>		
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- showcase -->
+	<!-- 
+		.bd-dark : background: black; in CSS
+		.p-5 : padding in CSS
+		.text-center : text-align:center in CSS
+	 -->
+	<div class="bg-dark text-light p-5 text-center">
+		<div class="container">
+
+			<!-- 
+				.d-md-flex : Container will be flex when md breakpoint is reached
+				.align-items-center : align-items: center; in CSS
+				.justify-content-center : justify-content: center; in CSS 
+				.fs-2 : font-size in CSS
+				.fw-bolder : font-weight: bolder; in CSS 
+				.fst-italic : font-style: italic; in CSS
+				.fst-normal : font-style: normal; in CSS
+				.text-light : color: white; in CSS
+				.text-decoration-none : text-decoration: none; in CSS
+				.btn : Button class
+				.btn-lg : large button
+				.btn-primary : Primary button
+				.w-100 : width:100%; in CSS
+				.img-fluid : Responsive image w/ width: 100%
+				.d-none: display:none; in CSS
+				.d-md-block: display:block; in CSS when md breakpoint is reached
+			 -->
+			<div class="d-md-flex align-items-center justify-content-center">
+				<div>
+					<p class="fs-2 fw-bolder fst-italic">This is some <span class="text-warning">heading</span></p>
+					<p class="text-light fst-normal text-decoration-none">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Imperdiet nulla malesuada pellentesque elit eget.</p>
+					<button class="w-100 btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modalID">BUTTON</button>
+				</div>
+				<div>
+					<img src="asset/designer.png" class="img-fluid w-100 d-none d-md-block" alt="The Designer">
+				</div>
+			</div>	 
+		</div>
+	</div>
+
+	<!-- Newsletter -->
+	<!-- 
+		.bg-primary : background: blue; in CSS.
+		.text-light : color: white; in CSS.
+		.p-3 : Assigning password in CSS.
+		.text-center : text-align: center; in CSS.
+		.d-md-flex : Container will be flex till md breakpoint, after which it will be block (default)
+		.justify-content-between : justify-content: space-between; in CSS.
+		.align-items-center : align-items: center; in CSS.
+		.h4 : <h4></h4>
+		.mb-3 : Assigning margin-bottom in CSS.
+		.mb-md-0 : When md break point is triggered then margin-bottom will be 0px
+		.input-group : Creates an input group.
+		.form-control : Styling <input>
+		.btn : <button></button> class
+		.btn-outline-dark : Giving button outline as dark color.
+		.btn-dark : Dark button.
+		.btn-lg : Large button.
+		.text-light : color: white; in CSS.
+	 -->
+	<section class="bg-primary text-light p-3 text-center">
+		<div class="container">
+			<div class="d-md-flex justify-content-between align-items-center">
+				<div class="h4 mb-3 mb-md-0">Sign up for our newsletter</div>
+				<div class="input-group signup-group">
+			  		<input type="text" class="form-control" placeholder="Enter e-mail ID">
+			  		<button class="btn btn-outline-dark btn-dark btn-lg text-light" type="button">Button</button>
+			    </div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Boxes -->
+	<!-- 
+		.row : Creating a row in a container class.
+		.col-md : When all elements of row have col-md class then they're of equal width,
+		          additionally, the column element will become row on reaching md breakpoint.
+		.card : Card class.
+		.card-body : Creating body of card
+		.bi : Bootstrap icon class.
+		.bi-laptop : Laptop icon class.
+		.card-title : Title of card.
+		.card-text : Text content in card.
+	 -->
+	<section id="section1" class="p-5 text-center">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md g-4">
+					<div class="card bg-dark text-light">
+						<div class="card-body text-center">
+							<i class="bi bi-laptop h2 mb-3"></i>
+							<h4 class="card-title mb-3">SOME TITLE #1</h4>
+							<p class="card-text mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+							<a href="#" class="btn btn-primary text-center">Read more</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md g-4">
+					<div class="card bg-secondary text-light mb-3">
+						<div class="card-body text-center">
+							<i class="bi bi-rainbow bi-2x h2 mb-3"></i>
+							<h4 class="card-title mb-3">SOME TITLE #2</h4>
+							<p class="card-text mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+							<a href="#" class="btn btn-dark text-center">Read more</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md g-4">
+					<div class="card bg-dark text-light mb-3">
+						<div class="card-body text-center">
+							<i class="bi bi-receipt bi-2x h2 mb-3"></i>
+							<h4 class="card-title mb-3">SOME TITLE #3</h4>
+							<p class="card-text mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+							<a href="#" class="btn btn-primary text-center">Read more</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Learn sections -->
+	<section id="section2" class="p-5 text-center">
+		<div class="container">
+			<div class="row align-items-center justify-content-between">
+				<div class="col-md">
+					<img src="asset/coding.png" class="mb-5 img-fluid" alt="WFH">
+				</div>
+				<div class="col-md">
+					<h2>Another heading</h2>
+					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt, odio modi tempora explicabo quam natus dolorem ducimus numquam voluptas optio deleniti qui? Natus laboriosam cum facilis sapiente obcaecati beatae fuga.</p>
+					<a href="#" class="btn btn-light"><i class="bi bi-chevron-right"></i> READ MORE</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- React section -->
+	<section id="section3" class="p-5 text-center bg-dark text-light">
+		<div class="container">
+			<div class="row align-items-center justify-content-between">
+				<div class="col-md">
+					<h2>One more heading</h2>
+					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt, odio modi tempora explicabo quam natus dolorem ducimus numquam voluptas optio deleniti qui? Natus laboriosam cum facilis sapiente obcaecati beatae fuga.</p>
+					<a href="#" class="btn btn-light"><i class="bi bi-chevron-right"></i> READ MORE</a>
+				</div>
+				<div class="col-md">
+					<img src="asset/chillout.png" class="mt-5 img-fluid" alt="WFH">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Questions accordion -->
+	<section id="section4" class="p-5">
+		<div class="container-fluid">
+			<h2 class="text-center mb-4">Frequently Asked Questions</h2>
+			<div class="accordion accordion-flush" id="#faq">
+
+				<!-- ITEM 1 -->
+				<div class="accordion-item">
+					<h1 class="accordion-header" id="i1">
+						<button 
+							type="button"
+							class="collapsed accordion-button" 
+							data-bs-toggle="collapse" 
+							data-bs-target="#q1">
+							Question 1
+						</button>
+					</h1>
+					<div 
+						id="q1" 
+						class="collapse accordion-collapse" 
+						data-bs-parent="#faq">
+							<div class="accordion-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet justo pulvinar, imperdiet ligula eget, elementum elit. Aenean ante nibh, elementum in eros sed</div>
+					</div>
+				</div>
+
+				<!-- ITEM 2 -->
+				<div class="accordion-item">
+					<h1 class="accordion-header" id="i2">
+						<button 
+							type="button"
+							class="collapsed accordion-button" 
+							data-bs-toggle="collapse" 
+							data-bs-target="#q2">
+							Question 2
+						</button>
+					</h1>
+					<div id="q2" class="collapse accordion-collapse" data-bs-parent="#faq">
+						<div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur odio obcaecati doloremque omnis ratione, aperiam provident quo nesciunt rerum hic magnam non fuga vero, laboriosam distinctio! Eum ipsa dignissimos quod.</div>
+					</div>
+				</div>
+
+				<!-- ITEM 3-->
+				<div class="accordion-item">
+					<h1 class="accordion-header" id="i3">
+						<button 
+							type="button"
+							class="collapsed accordion-button" 
+							data-bs-toggle="collapse" 
+							data-bs-target="#q3">
+							Question 3
+						</button>
+					</h1>
+					<div id="q3" class="collapse accordion-collapse" data-bs-parent="#faq">
+						<div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. A totam ullam eveniet possimus error sunt pariatur, nihil quae molestias. Sequi aut dignissimos impedit aspernatur obcaecati quam accusamus necessitatibus repellat explicabo.</div>
+					</div>
+				</div>
+			</div>
+	</section>
+
+	<!-- Instructors section -->
+	<section id="section5" class="bg-primary p-5 text-light">
+		<h2 class="text-center">Heading pe heading pe heading</h2>
+		<p class="lead text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, praesentium.</p>
+		<div class="d-md-flex container justify-content-evenly text-dark">
+			<div class="col-md-3 mb-4">
+				<div class="card">
+					<div class="card-body text-center">
+						<img src="https://randomuser.me/api/portraits/men/11.jpg" class="rounded-circle mb-3 w-75 ml-auto mr-auto" alt="John Doe">
+						<div class="card-title fw-bold lead">John Doe</div>
+						<div class="card-text mb-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit qui expedita officia? Porro, quia aliquid!</div>
+						<a href="#"><i class="mx-1 bi bi-twitter text-dark"></i></a>
+						<a href="#"><i class="mx-1 bi bi-facebook text-dark"></i></a>
+						<a href="#"><i class="mx-1 bi bi-instagram text-dark"></i></a>
+						<a href="#"><i class="mx-1 bi bi-linkedin text-dark"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3 mb-4">
+				<div class="card">
+					<div class="card-body text-center">
+						<img src="https://randomuser.me/api/portraits/women/12.jpg" class="rounded-circle mb-3 w-75 ml-auto mr-auto" alt="John Doe">
+						<div class="card-title fw-bold lead">Jane Doe</div>
+						<div class="card-text mb-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit qui expedita officia? Porro, quia aliquid!</div>
+						<a href="#"><i class="mx-1 bi bi-twitter text-dark"></i></a>
+						<a href="#"><i class="mx-1 bi bi-facebook text-dark"></i></a>
+						<a href="#"><i class="mx-1 bi bi-instagram text-dark"></i></a>
+						<a href="#"><i class="mx-1 bi bi-linkedin text-dark"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3 mb-4">
+				<div class="card">
+					<div class="card-body text-center">
+						<img src="https://randomuser.me/api/portraits/men/13.jpg" class="rounded-circle mb-3 w-75 ml-auto mr-auto" alt="John Doe">
+						<div class="card-title fw-bold lead">Steve Smith</div>
+						<div class="card-text mb-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit qui expedita officia? Porro, quia aliquid!</div>
+						<a href="#"><i class="mx-1 bi bi-twitter text-dark"></i></a>
+						<a href="#"><i class="mx-1 bi bi-facebook text-dark"></i></a>
+						<a href="#"><i class="mx-1 bi bi-instagram text-dark"></i></a>
+						<a href="#"><i class="mx-1 bi bi-linkedin text-dark"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Contact section -->
+	<section id="section6" class="p-5">
+		<div class="container">
+			<div class="row g-4">
+				<div class="col-md">
+					<h2 class="text-center mb-4">Contact information</h2>
+					<ul class="list-group list-group-flush lead">
+						<li class="list-group-item">
+							<span class="fw-bold">Main location:</span> 50 Main st., Boston, MA							
+						</li>
+						<li class="list-group-item">
+							<span class="fw-bold">Phone number:</span> 72772-3773737							
+						</li>
+						<li class="list-group-item">
+							<span class="fw-bold"> Student e-mail ID:</span> asxyzp@booboo.com							
+						</li>
+						<li class="list-group-item">
+							<span class="fw-bold"> Enrollment e-mail ID:</span> abcd@booboo.com							
+						</li>
+					</ul>
+				</div>
+				<div class="col-md">
+					<div id='map' style='width: 100%; height: 100%;'></div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="p-5 bg-dark text-light text-center position-relative">
+		<p class="lead">&copy; 2021 Lorem ipsum</p>
+		<a href="#" class="position-absolute bottom-0 end-0 p-5">
+			<i class="bi bi-arrow-up-right-square-fill h1 text-light"></i>
+		</a>
+	</footer>
+
+	<script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+	
+	<script>
+		mapboxgl.accessToken = 'pk.eyJ1IjoiYXN4eXpwIiwiYSI6ImNrcHdrMzcyMDAwaTcyb2xndDFpN2ZhOXUifQ.bAVq5v4LwD_ZxMeMWewy1g';
+		var map = new mapboxgl.Map({
+		container: 'map',
+		style: 'mapbox://styles/mapbox/streets-v11',
+		center: [-71.0609182,42.35725],
+		zoom: 18
+	});
+	</script>
+</body>
+</html>

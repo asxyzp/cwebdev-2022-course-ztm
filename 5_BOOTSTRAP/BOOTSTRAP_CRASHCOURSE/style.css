@@ -1,0 +1,8 @@
+@media(min-width: 768px) {
+    .signup-group{
+        width: 50%;
+    }
+    #section-img{
+        width: 50%;
+    }
+}
