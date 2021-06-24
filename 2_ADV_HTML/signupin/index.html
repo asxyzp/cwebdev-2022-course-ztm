@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign up - Logd</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<h1 id="app-name">Logd</h1>
+	<div id="sign-form-container">
+		<form id="sign-form" action="/" method="GET">
+			<div id="sign-option-container">
+				<div class="sign-option">
+					<input type="radio" name="sign" id="up" value="up" checked="true">
+					<label for="up">sign-up</label>
+				</div>
+				<div class="sign-option">
+					<input type="radio" name="sign" id="in" value="in">
+					<label for="in">sign-in</label>
+				</div>
+			</div>
+			<input name="username" type="text" placeholder="Enter username" class="form-element" required>
+			<input name="password" type="password" placeholder="Enter password" class="form-element password-element" required>
+			<button type="submit" class="form-element button-element">Create a new account</button>
+		</form>
+		<p id="forgot-password"><strong>Forgot password?</strong> <a href="#">Click here</a></p>
+		<div class="alert">Woah! That username already exists.</div>
+		<div class="alert">Woah! The password you've entered is wrong.</div>
+		<div class="alert">Woah! No such account exists for this username.</div>
+	</div>
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

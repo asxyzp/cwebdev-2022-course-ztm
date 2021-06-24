@@ -1,0 +1,107 @@
+body{
+	width: 95vw;
+	height: 95vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: rgba(230,230,230,0.5);
+	font-family: sans-serif;
+}
+
+/*Contains the form, logo and alerts*/
+#sign-form-container{
+	display: block;
+	width: 30vw;
+	padding: 10px;
+	border-radius: 7px;
+	background: rgba(255,255,255,1);
+	text-align: center;
+	box-shadow: 0px 10px 10px -5px black;
+}
+
+/*Contains both sign-up and sign-in radio button*/
+#sign-option-container{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+/*Container for radio button containing signup and signin radio buttons & their respective labels*/
+.sign-option{
+	width: 50%;
+	padding: 2%;
+	text-align: center;
+	margin: 5px;
+	font-size: 24px;
+}
+
+/*Class, which will be inserted into the parent */
+.sign-option-checked{
+	background-color: black;
+	color: white;
+	border-radius: 5px;
+	box-shadow: 0px 10px 10px -5px black;
+}
+
+/*Styling radio buttons*/
+input[type="radio"]{width: 0.1px;}
+
+/*Styling labels for radio buttons*/
+label{margin-left: -10px;}
+
+/*Styling text element*/
+.form-element{
+	width: 93%;
+	padding: 10px;
+	outline: 0;
+	border: 0px;
+	border-radius: 3px;
+	display: block;
+	margin: 10px auto;
+	font-size: 18px;
+	background: rgba(230,230,230,0.7);
+}
+.
+/*Styling placeholder of text element*/
+.form-element::placeholder{
+	font-size: 18px;
+	padding: 5px;
+}
+
+/*Styling button element*/
+.button-element{
+	width: 99%;
+	color: white;
+	font-size: 18px;
+	background: rgb(0,0,0);
+}
+
+/*Styling links on the page*/
+a{color: black;}
+
+/*Styling the forgot password text*/
+#forgot-password{
+	font-size: 15px;
+	margin-bottom: -1px;
+}
+
+/*Styling app name : Logd*/
+#app-name{
+	font-family: 'Pacifico', cursive;
+}
+
+/*Styling alert*/
+.alert{
+	padding: 10px;
+	font-size: 16px;
+	background: rgb(0,0,0);
+	color: white;
+	border-radius: 3px;
+}
+
+@media(max-width: 500px){
+	#sign-form-container{
+		width: 90vw;
+	}
+}
