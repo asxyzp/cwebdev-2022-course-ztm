@@ -1,0 +1,40 @@
+h1{
+	margin: 10px auto;
+	text-align: center;
+	font-size: 4em;
+	font-family: 'Playfair Display', serif;
+	width: 600px;
+	border-bottom: 5px solid #000;
+}
+.container{
+	display: flex;				/*This is what initiates the flexbox container*/
+	flex-wrap: wrap; 			/*This is used to wrap flexbox container items into multiple lines*/
+	justify-content: center; 	/*This is used to set the horizontal position of the elements in the container*/
+	align-items: center;
+}
+
+img{
+	margin: 10px;
+	width: 350px;		/*Declaration of height and width in CSS is better because of re-usability*/
+}
+
+.img1{transition: transform 0.5s linear;}
+.img2{transition: transform 0.5s ease;}
+.img3{transition: transform 0.5s ease-in;}
+.img4{transition: transform 0.5s ease-out;}
+.img5{transition: transform 0.5s ease-in-out;}
+
+img:hover{
+	transform: scale(1.1);
+	box-shadow: 0px 10px 10px -8px;
+}
+
+@media(max-width:  600px){
+	h1{
+		font-size: 2em;
+		width: 80vw;
+	}
+	img{
+		margin: 20px;
+	}
+}
