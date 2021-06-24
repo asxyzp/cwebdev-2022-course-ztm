@@ -1,0 +1,19 @@
+:root{
+	font-size: 16px;
+};
+h2{color: red;}		
+p{
+	font-size: 20px;
+}
+.lorem{
+	font-size: 5em;		/*Same as font-size: 100px because font-size of p is 20px*/
+}
+.lorem1{
+	font-size: 5rem;	/*Same as font-size: 80px because font-size of root element is 20px*/
+}
+.boxmodel{
+	display: inline-block;
+	margin: 10px 20px 30px 40px;/*top, right bottom left*/
+	padding: 20px 40px;			/*top-bottom left-right*/ 
+	border: 10px solid #000;
+}

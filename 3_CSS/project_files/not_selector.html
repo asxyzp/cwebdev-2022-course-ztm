@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>not selector</title>
+	<style type="text/css">
+
+		div{
+			border: 1px solid #000;
+			margin: 10px;
+			padding: 10px;
+		}
+		body{
+			text-align: center;
+			font-family: sans-serif;
+		}
+
+		/*negation pseudo-class w/ simple selector*/
+		body > .specific0 > :not(.class2){
+			background: lightsalmon;
+			padding: 10px;
+		}
+		body > .specific0 > :not(.class1){
+			background: lightcoral;
+			padding: 10px;
+		}
+
+		/*Adding multiple selectors w/in negation pseudo-class*/
+		body > .specific1 > :not(.class3):not(.class4){
+			background: lightsteelblue;
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+	<h1>:not() pseudo-class selector</h1>
+	<div class="specific0">
+		<p class="class1">class1</p>
+		<p class="class1">class1</p>
+		<p class="class1">class1</p>
+		<p class="class2">class2</p>
+		<p class="class1">class1</p>
+		<p class="class1">class1</p>
+		<p class="class1">class1</p>
+	</div>
+	<div class="specific1">
+		<p class="class3">class3</p>
+		<p class="class3">class3</p>
+		<p class="class4">class4</p>
+		<p class="class4">class4</p>
+		<p class="class5">class5</p>
+		<p class="class5">class5</p>
+	</div>
+</body>
+</html>

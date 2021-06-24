@@ -1,0 +1,50 @@
+body{	/*Styling the body tag*/
+	background-image: url("https://i.picsum.photos/id/10/2500/1667.jpg?hmac=J04WWC_ebchx3WwzbM-Z4_KC_LeLBWr5LZMaAkWkF68");
+	background-size: cover;
+}
+h2{
+	color: blue;
+	margin: 10px;
+	padding: 10px;
+	text-align: center;
+	background: white;
+	border-radius: 7px;
+	border: 5px solid black;
+	font-family: sans-serif;
+	box-shadow: 5px 5px black;
+}		
+p{
+	color: green;
+	margin: 10px;
+	padding: 10px;
+	background: white;
+	font-style: italic;
+	border-radius: 7px;
+	text-align: justify;
+	border: 5px solid purple;
+	box-shadow: 5px 5px purple;
+}	
+p{color: grey;}		/*grey will override green because of cascading in CSS*/
+li{
+	list-style-type: none;
+}
+
+/*Styling text-decoration*/
+.uline{text-decoration: underline;}
+.oline{text-decoration: overline;}
+.linet{text-decoration: line-through;}
+
+/*Styling text-transform*/
+.lcase{text-transform: lowercase;}
+.ucase{text-transform: uppercase;}
+.capitalize{text-transform: capitalize;}
+
+/*Styling line-height*/
+.five{line-height: 5px;}
+.ten{line-height: 10px;}
+.twenty{line-height: 20px;}
+
+/*Styling font-style*/
+.normal{font-style: normal;}
+.italic{font-style: italic;}
+.oblique{font-style: oblique;}

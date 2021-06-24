@@ -1,0 +1,316 @@
+/*
+	element selector : element_name{}
+	selects all the HTML elements with the given name
+*/
+div{
+	width: 50%;
+	margin: 10px auto;
+	text-align: justify;
+	font-family: sans-serif;
+}
+h1{
+	text-align: center;
+}
+h2{
+	text-align: center;
+}
+h4,ul,ol{
+	width: 50%;
+	display: block;
+	margin: 0px auto;
+}
+/*
+	id selector : #id_name{}
+	selects unqiue HTML element with an ID
+	id selector can't begin with a number
+*/
+#ruin_img{
+	display: block;
+	margin: 0px auto;
+	width: 46vw;
+}
+#1234{
+	font-family: cursive;
+}
+
+/*
+	class selector : .class_name{}
+	selects all HTML elements with the given name
+	element with a particular class name can also be selected as element_name.class_name
+	class selector can't begin with a number
+*/
+.title_heading{
+	font-family: 'Roboto Slab', serif;
+}
+.latin_img{
+	display: block;
+	margin: 0px auto;
+	width: 46vw;
+}
+div.cursive{
+	font-family: cursive;
+}
+.weighty{
+	font-weight:600;
+}
+
+/*
+	Multiple selectors : selector1, selector2, ... selectorN{};
+	Selects multiple selectors -- can be anything
+*/
+.para3, #para4, div.para5{
+	font-family: monospace;
+}
+
+/*
+	Universal selector : *{}
+	Selects everything
+*/
+*{
+	background-color: rgba(230,230,230,0.5);
+	padding: 5px;
+} 
+
+/*
+	Descendant selectors : selector1 selector2{}
+	It selects all the selector2 which are inside selector1, irrespective of whether the direct descendant or not
+*/
+.descendant .type1{
+	color: white;
+	background-color: black;
+}
+.descendant .type2{
+	background-color: grey;
+}
+
+/*
+	Child selectors : selector1 > selector2{}
+	It selects all the selector2 which are inside selector1, when selector2 are the direct descendant of selector1
+*/
+.child >.type3{
+	background-color: orange;
+}
+.child >.type4{
+	background-color: lightgreen;
+}
+
+/*
+	Adjacent selectors : selector1 + selector2{}
+	It selects the selector immediately after the selector2
+*/
+.type7 + .type8{
+	background-color: lightpink;
+}
+
+/*
+	General sibling selectors : selector1 ~ selector2{}
+	It selects all the selector2 HTML elements which are siblings of selector1
+*/
+.type9 ~ .type11{
+	background-color: maroon;
+	color: white;
+}
+.type10 ~ .type12{
+	background-color: blue;
+	color: white;
+}
+.type13 ~ .type14{
+	background-color: green;
+}
+
+/*	Pseudo-class selector*/
+/*	Hover pseudo-class selector:hover{}*/
+.hover{
+	width: 45%;
+	color: black;
+	padding: 10px;
+	display: block;
+	font-weight: 700;
+	margin: 0px auto;
+	background: green;
+	text-align: center;
+	border-radius: 7px;
+	border: 5px solid #000;
+	box-shadow: 5px 5px #000;
+}
+.hover:hover{
+	background: darkblue;
+	color:white;
+}
+
+
+/*	hover pseudo-class selector:hover{}*/
+.dropdown{
+	width: 45%;
+	color: white;
+	padding: 10px;
+	display: block;
+	font-weight: 700;
+	margin: 20px auto 10px;
+	background: blue;
+	text-align: center;
+	border-radius: 7px;
+	border: 5px solid #000;
+	box-shadow: 5px 5px #000;
+}
+.dropdown:hover{
+	background: green;
+	color:white;
+}
+.dropdown-menu{
+	width: 45%;
+	display: none;
+	font-weight: 700;
+	margin: 20px auto 10px;
+	text-align: center;
+	border-radius: 7px;
+	border: 5px solid #000;
+	box-shadow: 5px 5px #000;
+}
+.dropdown:hover + .dropdown-menu{
+	display: block;
+}
+.dropdown-menu > div{
+	width: 93%;
+	margin: 10px auto;
+	padding: 10px;
+	text-align: center;	 
+}
+.dropdown-menu > div:hover{
+	background-color: darkblue;
+	color: white;
+	border-radius: 7px;
+	border: 5px solid #000;
+	box-shadow: 5px 5px #000;
+}
+.dropdown-menu:hover{            /*This technique works for mobile but not for desktop*/
+	display: block;
+}
+
+/* Focus pseudo-class selector :focus{}*/
+.text{
+	width: 43%;
+	display: block;
+	margin: 20px auto;
+	border: 5px solid #000;
+	border-radius: 7px;
+	box-shadow: 5px 5px #000;
+	border-radius: 7px;
+	outline: 0;
+	padding: 15px;
+}
+.text:focus{
+	border: 5px solid purple;
+	box-shadow: 5px 5px purple;
+}
+
+/*Pseudo-element selector : selector::pseudo_element{}*/
+/*Selecting the first line using ::first-line{}*/
+.fline::first-line{
+	font-weight: 900;
+}
+
+/*Selecting the first letter using ::first-letter{}*/
+.fletter{
+	font-size: 20px;
+	text-align: left;
+}
+.fletter::first-letter{
+	font-family: 'Roboto Slab', serif;
+	font-size: 40px;
+}
+
+/*Selecting before element using ::before{}*/
+.ball{
+	width: 50px;
+	height: 50px;
+	display: block;
+	position: relative;
+	margin: 40px auto;
+	padding: 40px;
+	border: 1px solid #000;
+	border-radius: 50%;
+	z-index: 2;
+	background-image: linear-gradient(180deg,red,yellow);
+}
+.ball::before{
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	margin: 10px auto;
+	content: "";
+	border-radius: 50%;
+	width: 10px;
+	height: 40px;
+	padding: 50px 20px;
+	background-color: rgba(0,0,0,0.5);
+	-webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+
+/*Selecting an element after one element*/
+.css::before{
+	content: "✨";
+}
+.css::after{
+	content: "✨";
+}
+
+/*Selecting marker for list elements using ::marker{}*/
+ul>li::marker{
+	content: "✨"; 
+}
+
+/*Selecting placehold of an input text field using ::placeholder*/
+.text::placeholder{
+	text-align: center;
+	font-size: 24px;
+	padding: 10px;
+	font-weight: 600;
+	color: black;
+}
+
+/*Attribute selector*/
+/*Selecting elements on the basis of attribute*/
+.text1[type="text"]{
+	outline:0;
+	width: 47%;
+	color: white;
+	padding: 20px;
+	display: block;
+	border-width: 0;
+	font-size: 18px;
+	margin: 0px auto;
+	text-align: center;
+	border-radius: 5px;
+	background-color: grey;
+}
+.text1[type="text"]::placeholder{
+	color: white;
+	font-size: 18px;
+	text-align: center;
+}
+.text1[type="text"]:focus{
+	border: 4px solid #000;
+}
+
+/*!impotant to override all selectors*/
+body{
+	background-color: white!important;
+}
+
+//CSS Media queries foe mobile view
+@media(max-width: 600px){
+	#ruin_img, .latin_img{
+		width:70vw;
+	}
+	div, .hover, .dropdown, .dropdown-menu, .text, h4, ul{
+		width: 90%;
+	}
+	.dropdown-menu > div, .text1[type="text"]{
+		width: 85%;
+	}
+}

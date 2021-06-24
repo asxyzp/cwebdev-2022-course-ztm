@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS selectors</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style3.css">
+</head>
+<body>
+
+	<!-- Simple selectors-->
+	<div><h1 id="1234" class="title_heading">Simple selectors</h1></div>
+	<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in venenatis ante. Nunc finibus, tellus sed congue fringilla, odio nisl laoreet lorem, ut mattis ante magna eu velit. Nam non varius justo.</div>
+	<div><img id="ruin_img" src="constantinos.jpg" alt="Ancient ruins"></div>
+	<div class="cursive weighty">Pellentesque scelerisque felis id vulputate pulvinar. Aliquam erat volutpat. Sed pellentesque magna in nibh sagittis, convallis sollicitudin urna iaculis. Vestibulum id quam et nulla ornare vestibulum.</div>
+	<div><img class="latin_img" src="latin.jpg" alt="Latin text"></div>
+	<div class="para3">PVivamus dui mauris, laoreet vel imperdiet at, sodales vitae ex. Maecenas leo urna, elementum malesuada eros ac, scelerisque sagittis ex. Etiam feugiat, sapien ac luctus condimentum, ante tortor feugiat dolor, vel commodo mi eros id lorem.</div>
+	<div id="para4">PVivamus dui mauris, laoreet vel imperdiet at, sodales vitae ex. Maecenas leo urna, elementum malesuada eros ac, scelerisque sagittis ex. Etiam feugiat, sapien ac luctus condimentum, ante tortor feugiat dolor, vel commodo mi eros id lorem.</div>
+	<div class="para5">Praesent venenatis dapibus odio, a euismod dui imperdiet sed. Aenean at enim lacus. Quisque lobortis, libero et porttitor euismod, lorem magna pellentesque lacus, et egestas risus tortor ultrices ante. Suspendisse nec egestas purus, et iaculis nulla.</div>
+
+	<!-- Combinator selectors -->
+	<!-- Descendant selectors -->
+	<div><h1 class="title_heading">Combinator selectors</h1></div>
+	<div><h2 class="title_heading">Descendant selector</h2></div>
+	<div class="descendant">
+		<div class="type6" style="width: 50%;">
+			<p class="type1">Lorem ipsum dolor sit amet.</p>
+			<p class="type2">Suspendisse mattis lectus non eros tincidunt, non viverra dolor condimentum.</p>
+		</div>
+		<p class="type1" style="width: 50%; display: block; margin: 0 auto;">Pellentesque scelerisque felis id vulputate pulvinar.</p>
+	</div>
+
+	<!-- Child selectors -->
+	<div><h2 class="title_heading">Child selector</h2></div>
+	<div class="child">
+		<div class="type5">
+			<p class="type3">Lorem ipsum dolor sit amet.</p>
+			<p class="type4">Suspendisse mattis lectus non eros tincidunt, non viverra dolor condimentum.</p>
+		</div>
+		<p class="type3" style="width: 50%; display: block; margin: 0 auto;">Pellentesque scelerisque felis id vulputate pulvinar.</p>
+	</div>
+
+	<!-- Adjacent selectors -->
+	<div><h2 class="title_heading">Adjacent selector</h2></div>
+	<div>
+		<div class="type7">Type7 div</div>
+		<div>!Type div</div>
+		<div class="type8">Type8 div</div>
+		<div class="type7">Type7 div</div>
+		<div class="type8">Type8 div</div>
+	</div>
+
+	<!-- Sibling selectors -->
+	<div><h2 class="title_heading">Sibling selector</h2></div>
+	<div>
+		<div class="type9">Type9 div</div>
+		<div class="type10">Type10 div</div>
+		<div class="type11">Type11 div</div>
+		<div class="type12">Type12 div</div>
+		<div class="type13">Type13 div</div>
+		<div>
+			<div class="type14">Type14 div</div>
+		</div>
+	</div>
+
+	<!-- Pseudo-class selectors -->
+	<div><h1 class="title_heading">Pseudo-class selectors</h1></div>
+	<div class="hover">Hover over me to chance the color</div>
+	<div class="dropdown">Hover over here to show the dropdown menu</div>
+	<div class="dropdown-menu">
+		<div>Menu Item1</div>
+		<div>Menu Item2</div>
+		<div>Menu Item3</div>
+		<div>Menu Item4</div>
+		<div>Menu Item5</div>
+		<div>Menu Item6</div>
+	</div>
+	<input type="text" name="text" class="text" placeholder="Please enter some text">
+	
+	<!-- Pseudo-element selectors -->
+	<div><h1 class="title_heading">Pseudo-element selectors</h1></div>
+	<div class="fline">Praesent venenatis dapibus odio, a euismod dui imperdiet sed. Aenean at enim lacus. Quisque lobortis, libero et porttitor euismod, lorem magna pellentesque lacus, et egestas risus tortor ultrices ante. Suspendisse nec egestas purus, et iaculis nulla.</div>
+	<div class="fletter">Praesent venenatis dapibus odio, a euismod dui imperdiet sed. Aenean at enim lacus. Quisque lobortis, libero et porttitor euismod, lorem magna pellentesque lacus, et egestas risus tortor ultrices ante. Suspendisse nec egestas purus, et iaculis nulla.</div>
+	<div>
+		<div class="ball"></div>
+	</div>
+	<h4>Things you have to learn to become a full-stack developer : </h4>
+	<ul>
+		<li>HTML, CSS & JS</li>
+		<li>React.js</li>
+		<li>Node.js & Express.js</li>		
+		<li>SQL/NoSQL databases</li>
+	</ul>
+	<div>
+		<span class="css">Cascading Style Sheets</span> is a style sheet language used for describing the presentation of a document written in a markup language such as HTML. <span class="css">CSS</span> is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.
+	</div>
+
+	<!-- Attribute selectors -->
+	<div><h1 class="title_heading">Attribute selectors</h1></div>
+	<input type="text" name="text1" class="text1" placeholder="Please enter some text">
+</body>
+</html>
