@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Testing media query</title>
+	<style type="text/css">
+		html,body{
+			padding: 0px;
+			margin: 0px;
+		}
+		.page1{
+			width: 100vw;
+			display: flex;
+			height: 100vh;
+			align-items: center;
+			font-family: sans-serif;
+			justify-content: center;
+			font-size: 3em;
+			
+		}
+		.page2{
+			width: 100vw;
+			display: flex;
+			height: 100vh;
+			text-align: center;
+			align-items: center;
+			font-family: sans-serif;
+			justify-content: center;
+			font-size: 3em;
+		}
+		@media screen{
+			.page1{
+				background: lightskyblue;
+			}
+			.page2{
+				background: lightsalmon;
+			}
+		}
+		@media print{
+			.page1{
+				background: lightsalmon;
+			}
+			.page2{
+				background: lightskyblue;
+			}	
+		}
+	</style>
+</head>
+<body>
+	<div class="page1"><h1>asxyzp</h1></div>
+	<div class="page2"><h2>Computers + Mathematics</h2></div> 
+</body>
+</html>
