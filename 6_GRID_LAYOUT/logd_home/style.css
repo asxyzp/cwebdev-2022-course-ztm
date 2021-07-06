@@ -1,0 +1,74 @@
+/*
+	Custom CSS for the Logd Landing page
+	Created by Aashish Loknath Panigrahi
+*/
+
+/*Styling the topmost section of the landing page*/
+.logo{											/*Styling the logo of the text*/										
+	display: block;
+	width: fit-content;
+	height: fit-content;
+	border-radius: 7px;
+	box-shadow: 3px 3px #000;
+	font-family: 'Pacifico', cursive;
+}
+.pacifico{font-family: 'Pacifico', cursive;}	/*Using pacifico font */
+section>.top-img{width: 50%;}					/*Top image in the landing page*/
+
+/*Styling the second section of the landing page*/
+/*Styling cards & it's element used across the page*/
+.card{width: 75%;}								/*Styling the card used across the landing page*/
+.time-val{font-size: 3em;}						/*time-val:  Displays value of time passed*/
+.pointer{cursor: pointer;}						/*Shows cursor pointer when upon it*/
+.card-emoji{									/*Styling emoji on the task card acting as a tag*/
+	top:  0;
+	font-size: 3em;
+	margin-top: -30px;
+}
+.form-control-demo{								/*Styling all form elements*/
+	width: 95%;
+	margin: 5px;
+	resize: none;
+}
+.time-marker{									/*Styling div of the timer card whose height increases with passing time*/
+	bottom: 0;
+	z-index: 0;
+	width: 100%;
+	position:absolute;
+	background-color: lightgreen;
+}
+.time-container{								/*Styling the div of the timer card which contains timer-val and buttons for stoppping and cancelling the timer*/
+	z-index: 1;
+	height: 100%;
+	position: relative;
+}
+
+/*Styling the third section and it's elements*/
+/*Styling sign-up/-in section and it's forms*/
+#signupin{height: 70vh;}
+form{width: 70%;}
+form>div{width: 75%;}
+form>div>label{
+	margin: 10px;
+	width: 45%;
+}
+.signupin-form{padding: 10px;}
+
+/*Styling the elements of the footer section*/
+.small{											/*Styling the .small class of Bootstrap*/
+	font-size: 0.7em!important;
+	padding: 2px;
+}
+
+
+/*CSS media breakpoints*/
+@media screen and (max-width:  500px){
+	section>.top-img{width: 100%;}
+	.card{width: 90%;}
+	form{width: 100%;}
+}
+@media screen and (min-width:  500px) and (max-width:  900px){
+	section>.top-img{width: 70%;}	
+	.card{width: 85%;}
+	form{width: 80%;}
+}
