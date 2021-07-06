@@ -70,5 +70,5 @@ form>div>label{
 @media screen and (min-width:  500px) and (max-width:  900px){
 	section>.top-img{width: 70%;}	
 	.card{width: 85%;}
-	form{width: 80%;}
+	form{width: 90%;}
 }
