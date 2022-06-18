@@ -6,14 +6,16 @@ This repository contains the code for the course "Complete web developer in 2022
 
 Each directory of this repo contains codes for different sections which have been taught in this course:
 
-- 0_WWW => History of the web
-- 1_HTML => Hypertext Markup Language
-- 2_ADV_HTML => Advanced HTML
-- 3_CSS => Cascading stylesheet
-- 4_ADV_CSS => Advanced CSS
-- 5_BOOTSTRAP => Bootstrap CSS
-- 6_GRID_LAYOUT => Grid layout
-- 7_JS => JavaScript
+```
+0_WWW => History of the web
+1_HTML => Hypertext Markup Language
+2_ADV_HTML => Advanced HTML
+3_CSS => Cascading stylesheet
+4_ADV_CSS => Advanced CSS
+5_BOOTSTRAP => Bootstrap CSS
+6_GRID_LAYOUT => Grid layout
+7_JS => JavaScript
+```
 
 ## Projects
 
