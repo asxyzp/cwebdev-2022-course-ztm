@@ -20,11 +20,11 @@ Each directory of this repo contains codes for different sections which have bee
 Different projects built while learning this course:
 
 - RiceNews
-    Description: A simple fullstack news aggregation app
-    Repo: https://github.com/asxyzp/rice-news
-    Link: https://rice-news--asxyzp.repl.co/
+    - Description: A simple fullstack news aggregation app
+    - Repo: https://github.com/asxyzp/rice-news
+    - Link: https://rice-news--asxyzp.repl.co/
 
 - FlexGrid
-    Description: A CSS playground for learning CSS flexbox & grid layout
-    Repo: https://github.com/asxyzp/flexgrid
-    Link: https://flexgrid--asxyzp.repl.co/
+    - Description: A CSS playground for learning CSS flexbox & grid layout
+    - Repo: https://github.com/asxyzp/flexgrid
+    - Link: https://flexgrid--asxyzp.repl.co/
